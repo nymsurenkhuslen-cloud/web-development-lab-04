@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лаб 4 - Flexbox & CSS Grid Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header & Flexbox Navigation -->
+    <header class="site-header">
+      <div class="header-inner">
+        <h1 class="logo">IT202 Портфолио</h1>
+        <nav class="navbar">
+          <a href="#home">Нүүр</a>
+          <a href="#projects">Төслүүд</a>
+          <a href="#skills">Ур чадвар</a>
+          <a href="#contact">Холбоо барих</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Layout: Sidebar + Main Content (CSS Grid) -->
+    <div class="content-layout">
+      <aside class="sidebar">
+        <h2>Ангилал</h2>
+        <ul class="sidebar-menu">
+          <li><a href="#projects">Бүх лабораториуд</a></li>
+          <li><a href="#projects">HTML5 & Семантик</a></li>
+          <li><a href="#projects">CSS3 & Flexbox</a></li>
+          <li><a href="#projects">CSS Grid Layout</a></li>
+        </ul>
+
+        <div class="sidebar-box">
+          <h3>Оюутны мэдээлэл</h3>
+          <p><strong>Нэр:</strong> Нямсүрэн Хүслэн</p>
+          <p><strong>Хичээл:</strong> F.IT202 Веб хөгжүүлэлт</p>
+        </div>
+      </aside>
+
+      <main class="main-content" id="projects">
+        <div class="section-heading">
+          <h2>Лабораторийн ажлын картууд</h2>
+          <p>CSS Grid (3+ багана) болон Flexbox ашиглан зохион байгуулсан бүтэц</p>
+        </div>
+
+        <!-- 3 баганатай карт хэлбэрийн Grid -->
+        <section class="card-grid">
+          <article class="card">
+            <span class="card-tag">Лаб 01</span>
+            <h3>Товч CV Вэб Хуудас</h3>
+            <p>HTML5 үндсэн шошгууд, VS Code, Live Server болон GitHub Pages ашиглан анхны вэб хуудсаа байршуулсан.</p>
+            <a href="https://nymsurenkhuslen-cloud.github.io/web-development-lab-01/" target="_blank" class="card-btn">Үзэх</a>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Лаб 02</span>
+            <h3>Семантик HTML Форм</h3>
+            <p>Бүртгэлийн анкет, input валидаци, жагсаалт болон дүнгийн хүснэгт бүхий семантик хуудас.</p>
+            <a href="https://nymsurenkhuslen-cloud.github.io/web-development-lab-02/" target="_blank" class="card-btn">Үзэх</a>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Лаб 03</span>
+            <h3>CSS3 Загварчлал</h3>
+            <p>External CSS, class сонгогчид, Box Model, Google Fonts болон Position шинж чанараар загварчилсан хуудас.</p>
+            <a href="https://nymsurenkhuslen-cloud.github.io/web-development-lab-03/" target="_blank" class="card-btn">Үзэх</a>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Лаб 04</span>
+            <h3>Flexbox & Grid Layout</h3>
+            <p>Header, Navigation, Sidebar, 3 баганатай карт грид болон Footer бүхий бүтэн сайтын макет.</p>
+            <a href="#projects" class="card-btn">Одоогийн хуудас</a>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Flexbox</span>
+            <h3>Уян хатан цэс</h3>
+            <p><code>justify-content</code> болон <code>align-items</code> ашиглан навигацийн элементүүдийг тэгшилсэн.</p>
+            <a href="#projects" class="card-btn">Дэлгэрэнгүй</a>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">CSS Grid</span>
+            <h3>Олон баганатай систем</h3>
+            <p><code>grid-template-columns</code> болон <code>gap</code> ашиглан картуудыг жигд зайтай байрлуулсан.</p>
+            <a href="#projects" class="card-btn">Дэлгэрэнгүй</a>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-inner">
+        <p>&copy; 2026 Нямсүрэн Хүслэн — ЛАБ 4 (CSS Flexbox & CSS Grid Layout)</p>
+        <div class="footer-links">
+          <a href="https://github.com/nymsurenkhuslen-cloud" target="_blank">GitHub</a>
+          <a href="#home">Дээш буцах</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

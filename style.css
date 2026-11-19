@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Бүтэн хуудасны босоо Flexbox бүтэц */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. Header & Navigation (Flexbox ашигласан) */
+.site-header {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  background-color: #1e293b;
+  color: #38bdf8;
+}
+
+/* 2. Sidebar + Main Content үндсэн Grid бүтэц */
+.content-layout {
+  max-width: 1200px;
+  width: 100%;
+  margin: 28px auto;
+  padding: 0 20px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  background-color: #f8fafc;
+  transition: background-color 0.2s;
+}
+
+.sidebar-menu a:hover {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.sidebar-box {
+  background-color: #f8fafc;
+  border-left: 4px solid #0284c7;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.sidebar-box h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+/* Main Content & 3 баганатай карт Grid */
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 24px;
+  color: #0f172a;
+}
+
+.section-heading p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.1);
+}
+
+.card-tag {
+  align-self: flex-start;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.card p {
+  font-size: 14px;
+  color: #475569;
+  flex-grow: 1;
+}
+
+.card-btn {
+  display: inline-block;
+  text-align: center;
+  background-color: #0284c7;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.card-btn:hover {
+  background-color: #0369a1;
+}
+
+/* 3. Footer (Flexbox ашигласан) */
+.site-footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 18px 24px;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Жижиг дэлгэцэнд зориулсан зохицуулалт */
+@media (max-width: 960px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
